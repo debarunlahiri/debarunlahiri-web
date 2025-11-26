@@ -1,6 +1,7 @@
 'use client'
 
 import { Mail, Github, Phone, Download } from 'lucide-react'
+import { trackLinkClick } from '@/lib/analytics-client'
 
 const Hero = () => {
   const handleDownloadResume = () => {
@@ -11,9 +12,12 @@ const Hero = () => {
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
+
+    trackLinkClick({ href: '/Debarun_Lahiri_Resume.pdf', label: 'Download Resume' })
   }
 
   const handlePrintResume = () => {
+    trackLinkClick({ href: 'print', label: 'Print Resume' })
     window.print()
   }
 
@@ -31,6 +35,9 @@ const Hero = () => {
       <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm mb-4">
         <a
           href="mailto:debarunlahiri2016@gmail.com"
+          onClick={() =>
+            trackLinkClick({ href: 'mailto:debarunlahiri2016@gmail.com', label: 'Email Hero' })
+          }
           className="flex items-center justify-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
         >
           <Mail size={16} className="flex-shrink-0" />
@@ -41,6 +48,9 @@ const Hero = () => {
           href="https://github.com/debarunlahiri"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() =>
+            trackLinkClick({ href: 'https://github.com/debarunlahiri', label: 'GitHub Hero' })
+          }
           className="flex items-center justify-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
         >
           <Github size={16} className="flex-shrink-0" />
@@ -49,6 +59,7 @@ const Hero = () => {
         
         <a
           href="tel:+919205225428"
+          onClick={() => trackLinkClick({ href: 'tel:+919205225428', label: 'Phone Hero' })}
           className="flex items-center justify-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
         >
           <Phone size={16} className="flex-shrink-0" />

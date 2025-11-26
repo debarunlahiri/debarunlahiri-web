@@ -21,6 +21,57 @@ Visit the live portfolio: **[https://debarunlahiri-web.vercel.app/](https://deba
 - **Print-Friendly** - Optimized CSS for printing/PDF generation
 - **GitHub Integration** - Dynamic project cards with repository information
 - **Modern UI/UX** - Clean, professional design with smooth transitions
+- **Visitor Insights** - Logs page path, IP (when available), referrer, user agent, and coarse location for each visit in Supabase
+- **Link Click Tracking** - Captures clicks on primary contact links (email, GitHub, phone, resume actions) for engagement analytics
+- **YouTube Spotlight** - Displays the latest popular videos from the Debarun Lahiri YouTube channel with a horizontal scroll gallery
+
+### Environment Variables
+
+Create a `.env.local` file with the following variables:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=https://anzmatyxvjkguzzguwep.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_public_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+YOUTUBE_API_KEY=your_youtube_data_api_key
+YOUTUBE_CHANNEL_ID=optional_channel_id
+YOUTUBE_CHANNEL_HANDLE=DebarunLahiri
+
+> ⚠️ **Security notice:** Never commit actual Supabase keys (especially the service role key) to source control. Store sensitive values only in `.env.local`, your deployment environment variables, or a secure secret manager.
+```
+
+### Supabase Setup
+
+1. Create a table `page_views` with at least the following columns:
+   - `id` (uuid) default `uuid_generate_v4()`
+   - `created_at` (timestamp) default `now()`
+   - `path` (text)
+   - `ip_address` (text, nullable)
+   - `user_agent` (text, nullable)
+   - `referer` (text, nullable)
+   - `country` (text, nullable)
+   - `region` (text, nullable)
+   - `city` (text, nullable)
+2. Create a table `link_clicks` with columns:
+   - `id` (uuid) default `uuid_generate_v4()`
+   - `created_at` (timestamp) default `now()`
+   - `path` (text)
+   - `href` (text, nullable)
+   - `label` (text, nullable)
+   - `ip_address` (text, nullable)
+   - `user_agent` (text, nullable)
+   - `referer` (text, nullable)
+   - `country` (text, nullable)
+   - `region` (text, nullable)
+   - `city` (text, nullable)
+3. Deploy the project or run locally with the environment variables above.
+4. Each page load sends a POST request to `/api/analytics/page-view`, inserting metadata into `page_views`.
+5. Each monitored link click sends a POST request to `/api/analytics/link-click`, inserting metadata into `link_clicks`.
+6. Configure YouTube Data API access:
+   - Create a project in Google Cloud Console and enable the **YouTube Data API v3**.
+   - Generate an API key and set it as `YOUTUBE_API_KEY`.
+   - (Optional) Set `YOUTUBE_CHANNEL_ID`; if omitted, the app will resolve it using `YOUTUBE_CHANNEL_HANDLE`.
+7. (Optional) Add indexes on `created_at`, `path`, or `href` for faster querying when the dataset grows.
 
 ## Tech Stack
 
@@ -92,6 +143,7 @@ debarunlahiri-web/
 │   ├── Projects.tsx          # Professional projects
 │   ├── Education.tsx         # Educational background
 │   ├── GitHubProjects.tsx    # Personal GitHub projects
+│   ├── YouTubeGallery.tsx    # Popular videos gallery from YouTube channel
 │   ├── Contact.tsx           # Contact information
 │   └── ThemeToggle.tsx       # Dark/Light mode toggle
 ├── contexts/

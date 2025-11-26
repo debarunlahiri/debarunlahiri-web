@@ -1,6 +1,7 @@
 'use client'
 
 import { Mail, Github, Phone } from 'lucide-react'
+import { trackLinkClick } from '@/lib/analytics-client'
 
 const Contact = () => {
   return (
@@ -9,6 +10,9 @@ const Contact = () => {
         <a
           href="mailto:debarunlahiri2016@gmail.com"
           className="flex items-center justify-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          onClick={() =>
+            trackLinkClick({ href: 'mailto:debarunlahiri2016@gmail.com', label: 'Email Contact' })
+          }
         >
           <Mail size={16} className="flex-shrink-0" />
           <span className="break-all">debarunlahiri2016@gmail.com</span>
@@ -19,6 +23,9 @@ const Contact = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          onClick={() =>
+            trackLinkClick({ href: 'https://github.com/debarunlahiri', label: 'GitHub Contact' })
+          }
         >
           <Github size={16} className="flex-shrink-0" />
           <span>github.com/debarunlahiri</span>
@@ -27,6 +34,7 @@ const Contact = () => {
         <a
           href="tel:+919205225428"
           className="flex items-center justify-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          onClick={() => trackLinkClick({ href: 'tel:+919205225428', label: 'Phone Contact' })}
         >
           <Phone size={16} className="flex-shrink-0" />
           <span>+91-9205225428</span>
