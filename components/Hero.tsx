@@ -7,13 +7,13 @@ const Hero = () => {
   const handleDownloadResume = () => {
     // Create a link element and trigger download
     const link = document.createElement('a')
-    link.href = '/Debarun_Lahiri_Resume.pdf'
-    link.download = 'Debarun_Lahiri_Resume.pdf'
+    link.href = '/Debarun_Lahiri.pdf'
+    link.download = 'Debarun_Lahiri.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
 
-    trackLinkClick({ href: '/Debarun_Lahiri_Resume.pdf', label: 'Download Resume' })
+    trackLinkClick({ href: '/Debarun_Lahiri.pdf', label: 'Download Resume' })
   }
 
   const handlePrintResume = () => {
