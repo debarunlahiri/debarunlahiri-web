@@ -3,6 +3,11 @@
 const Projects = () => {
   const projects = [
     {
+      name: 'Vani AI - Speech To Text',
+      description: 'Vani AI is an offline speech-to-text mobile app where users speak into the device. Python handles audio processing with automatic language detection using the Whisper model, then generates text and translations to English, Hindi, and Korean via ArgosTranslate. Node.js serves as a proxy for API calls, while a separate Python API focuses on audio and translation. The Node.js website allows viewing, playing recordings, and accessing translations—all processed locally without internet. (Tech Stack: Kotlin, Android, Python, NodeJs, Javascript)',
+      techStack: ['Kotlin', 'Android', 'Python', 'NodeJs', 'Javascript']
+    },
+    {
       name: 'OTR - Operator Training Records',
       description: 'Led the design, development, and deployment of an Android application for Operator Training Records (OTR), aimed at providing operators with convenient access to their training records and compliance status. Enhanced usability based on user feedback, leading to increased user engagement.',
       techStack: ['Java', 'Kotlin', 'Spring Boot', 'Angular']
