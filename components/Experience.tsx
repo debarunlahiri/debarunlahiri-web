@@ -5,54 +5,60 @@ const Experience = () => {
     {
       company: 'Samsung Display Noida',
       role: 'Senior Assistant Engineer',
-      location: 'Ghaziabad, India',
+      location: 'Noida, UP, India',
       period: 'Dec 2022 – Present',
       achievements: [
-        'OCR System Development: As Tech Lead, led the design and implementation of an Optical Character Recognition (OCR) system using ML Kit. The system significantly improved data extraction efficiency by 20%, enabling faster decision-making and reducing manual effort in data processing.',
-        'Web Portal Design and Implementation: Designed and developed a user-centric web portal that streamlined business operations and enhanced the user experience by optimizing the layout, navigation, and overall usability. Resulted in a 15% increase in platform functionality and a smoother interface.',
-        'NLP ChatBot Development: Lead the development of a natural language processing-powered chatbot, which reduced customer response time by 40%. This tool provided real-time assistance, improving customer satisfaction and automating routine inquiries.',
-        'Cross-functional Collaboration for Manufacturing Optimization: Collaborated with cross-functional teams, including engineers and product managers, to deliver solutions that improved manufacturing efficiency by 15%, leading to a reduction in production downtime and a more optimized workflow.'
+        'Developed and maintained Android applications used in manufacturing operations, with a focus on stability, usability, and smooth day-to-day usage.',
+        'Built an OCR-based Android feature using ML Kit to capture text from documents and reduce manual data entry work.',
+        'Worked on camera integration, runtime permissions, API integration, app debugging, crash fixes, and version-related changes in Android applications.',
+        'Improved existing Android app screens and workflows using Kotlin, XML layouts, RecyclerView, ViewModel, and LiveData.',
+        'Designed and developed an internal web portal to make manufacturing data easier to access and improve the overall user experience.',
+        'Contributed to an NLP-based chatbot to help users get quick answers to common queries and reduce dependency on manual support.',
+        'Worked closely with manufacturing users, engineers, and internal teams to understand requirements, fix issues, and support production processes.'
       ]
     },
     {
       company: 'TraqIQ',
       role: 'Software Engineer',
-      location: 'Ghaziabad, India',
+      location: 'Noida, UP, India',
       period: 'Nov 2021 – Dec 2022',
       achievements: [
-        'Paytm Payment Gateway Integration: Integrated Paytm Payment Gateway into Spring Boot applications, ensuring secure and seamless transactions for thousands of users. This integration improved payment processing efficiency and significantly reduced transaction failures.',
-        'UI Performance Optimization: Developed dynamic, responsive user interfaces, reducing page load times by 30%. Leveraged frontend optimization techniques, including lazy loading and asynchronous data fetching, to enhance the overall performance and user experience.',
-        'Hybrid Mobile App Development: Developed a high-performance, cross-platform hybrid mobile app using Ionic Framework, ensuring responsive design and functionality across both iOS and Android platforms. The app streamlined internal processes and enhanced user engagement.'
+        'Worked on backend development using Spring Boot and helped build APIs for payment, user, and business-related workflows.',
+        'Integrated Paytm Payment Gateway into Spring Boot applications to support secure and smooth online payment processing.',
+        'Developed responsive web interfaces and improved page performance using lazy loading, asynchronous data fetching, and optimized UI rendering.',
+        'Built and maintained a hybrid mobile application using React Native, supporting smooth usage across both Android and iOS platforms.',
+        'Connected mobile and web applications with backend APIs to handle data flow, transactions, and user actions.',
+        'Fixed bugs, improved existing features, and worked on application stability based on user feedback and testing.',
+        'Collaborated with team members to understand requirements, deliver features, and support regular product updates.'
       ]
     },
     {
       company: 'Bnext IT Solutions',
       role: 'Android Developer',
-      location: 'Ghaziabad, India',
+      location: 'Noida, UP, India',
       period: 'May 2021 – Nov 2021',
       achievements: [
-        'App Performance Optimization: Enhanced mobile app performance, leading to a 25% increase in user retention by identifying and fixing key bottlenecks and bugs through rigorous testing and debugging.',
-        'OneSignal Integration for Notifications: Integrated OneSignal for push notifications and Google Play Payment Gateway, ensuring seamless transaction processing and real-time communication with users.'
+        'Developed and improved Android application features with a focus on smooth performance and better user experience.',
+        'Worked on testing, debugging, and fixing issues to improve app stability across different Android devices.',
+        'Integrated OneSignal push notifications to send real-time updates and improve user engagement.',
+        'Implemented Google Play in-app payment integration to support secure transactions inside the application.',
+        'Worked on UI changes, API integration, bug fixes, and regular app updates based on project requirements.',
+        'Collaborated with the team to understand requirements, resolve technical issues, and deliver features on time.'
       ]
     },
     {
       company: 'Grepix Infotech Private Limited',
       role: 'Android Developer',
-      location: 'Ghaziabad, India',
+      location: 'Noida, UP, India',
       period: 'Jan 2020 – Feb 2021',
       achievements: [
-        'Responsive UI Development: Designed and developed responsive mobile and tablet applications, improving accessibility for users across various devices. The design improvements increased user engagement and app usage.',
-        'Google Maps API Integration: Integrated Google Maps APIs into mobile apps to enhance functionality with real-time location-based services, providing users with enhanced navigation and location tracking features.'
-      ]
-    },
-    {
-      company: 'Rounderlabs Private Limited',
-      role: 'Android Developer',
-      location: 'Ghaziabad, India',
-      period: 'Jun 2019 – Dec 2019',
-      achievements: [
-        'Authentication Services: Implemented multiple authentication services including mobile, Facebook, Google and email login, greatly improving app security and providing users with multiple secure login options.',
-        'Video Streaming Optimization: Worked on optimizing a video streaming application, improving its performance by reducing buffering times and ensuring smoother playback even with lower network speeds.'
+        'Developed Android applications for mobile and tablet devices with a focus on clean UI, usability, and smooth performance.',
+        'Built and improved app screens using XML layouts, RecyclerView, Activities, Fragments, and reusable Android components.',
+        'Integrated Google Maps APIs to support location-based features such as live tracking, route display, and navigation.',
+        'Worked with REST APIs to fetch, display, and update application data in real time.',
+        'Handled runtime permissions, location services, background updates, and device compatibility issues across different Android versions.',
+        'Tested, debugged, and fixed app issues to improve stability and user experience.',
+        'Worked closely with backend developers and project teams to understand requirements and deliver Android features on time.'
       ]
     }
   ]

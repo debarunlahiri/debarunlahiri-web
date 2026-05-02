@@ -3,18 +3,23 @@
 const Projects = () => {
   const projects = [
     {
+      name: 'Warehouse Floor Map',
+      description: 'Built an interactive warehouse visualization system to track pallet locations, bin details, quantity, and aging status with dynamic color coding.',
+      techStack: ['Angular', 'Java', 'Spring', 'Oracle SQL']
+    },
+    {
       name: 'Vani AI - Speech To Text',
-      description: 'Vani AI is an offline speech-to-text mobile app where users speak into the device. Python handles audio processing with automatic language detection using the Whisper model, then generates text and translations to English, Hindi, and Korean via ArgosTranslate. Node.js serves as a proxy for API calls, while a separate Python API focuses on audio and translation. The Node.js website allows viewing, playing recordings, and accessing translations—all processed locally without internet. (Tech Stack: Kotlin, Android, Python, NodeJs, Javascript)',
-      techStack: ['Kotlin', 'Android', 'Python', 'NodeJs', 'Javascript']
+      description: 'Built an offline speech-to-text mobile app where users can speak into the device. Handled audio processing in Python with automatic language detection and translation support. Developed supporting APIs and a web interface to access recordings and translations locally.',
+      techStack: ['Kotlin', 'Android', 'Python', 'Node.js', 'JavaScript']
     },
     {
       name: 'OTR - Operator Training Records',
-      description: 'Led the design, development, and deployment of an Android application for Operator Training Records (OTR), aimed at providing operators with convenient access to their training records and compliance status. Enhanced usability based on user feedback, leading to increased user engagement.',
-      techStack: ['Java', 'Kotlin', 'Spring Boot', 'Angular']
+      description: 'Worked on designing and developing an Android application to manage operator training records and compliance. Focused on improving usability based on user feedback.',
+      techStack: ['Java', 'Android', 'Kotlin', 'Spring Boot', 'Angular']
     },
     {
       name: 'Chat Bot',
-      description: 'Designed conversational flows and integrated NLP models to enable the ChatBot to understand and respond to user inquiries effectively. Conducted A/B testing and collected user feedback to iterate on ChatBot features, resulting in a 40% reduction in customer response times and improved customer satisfaction scores.',
+      description: 'Developed a chatbot with NLP capabilities to handle user queries and provide automated responses. Improved conversational flow through testing and feedback.',
       techStack: ['Java', 'Android', 'Kotlin', 'NLP', 'Spring Boot', 'Oracle SQL']
     },
     {
@@ -29,33 +34,33 @@ const Projects = () => {
     },
     {
       name: 'LMS - Learning Management System',
-      description: 'Collaborated in a team of 7 developers to design, develop, and deploy a Learning Management System (LMS) for managing skills and training for Persons in Charge (PICs) and departments. Using technologies like Spring MVC to create interactive interfaces for course enrollment, content delivery, assessments, and progress tracking.',
-      techStack: ['Spring Boot', 'Java', 'Oracle SQL', 'Angular', 'RxJS', 'Microservices', 'AWS', 'GCP', 'Kafka']
+      description: 'Worked with a team to build a Learning Management System for managing training and skills. Contributed to features like course management, assessments, and tracking progress.',
+      techStack: ['Spring Boot', 'Java', 'Oracle SQL', 'Angular', 'RxJS', 'Microservices', 'AWS', 'Kafka']
     },
     {
       name: 'HireMe Driver & Rider',
-      description: 'Developed a cab booking app where users can book cabs and reach their destinations. Provided a platform for both riders and drivers to manage bookings. Worked on Backend for RestAPI.',
-      techStack: ['Java', 'Kotlin', 'Android', 'Firebase', 'Google Maps API', 'WebSockets']
+      description: 'Developed a cab booking application for riders and drivers. Worked on backend APIs and real-time features.',
+      techStack: ['Java', 'Kotlin', 'Android', 'Firebase', 'Google Maps API', 'iOS', 'React Native', 'WebSockets']
     },
     {
       name: 'TraqPayments',
-      description: 'Built a payment and collection management system, with multi-channel communication tools for customers and optimized backend operations. Provided an Android app for customer access. Worked on Backend for RestAPI and web portal for managing payments.',
-      techStack: ['Java', 'Android', 'Kotlin', 'Angular', 'Spring Boot', 'MySQL']
+      description: 'Built a payment and collection system with customer communication features. Worked on backend APIs and web portal for managing transactions.',
+      techStack: ['Java', 'Android', 'Kotlin', 'Angular', 'Spring Boot', 'iOS', 'React Native', 'MySQL']
     },
     {
       name: 'PictureTime & Filamchi',
-      description: 'Developed and maintained the PictureTime and Filamchi apps. Focused on mobile development and implemented back-end optimizations to improve response times and system reliability.',
-      techStack: ['Java', 'Firebase', 'Microservices', 'Spring Boot']
+      description: 'Worked on development and maintenance of mobile applications with focus on performance and backend improvements.',
+      techStack: ['React Native', 'Java', 'Firebase', 'Microservices', 'Spring Boot', 'iOS']
     },
     {
       name: 'Masala Dish (Customer, Driver & Restaurant Manager)',
-      description: 'Spearheaded the development of the Masala Dish Android application, providing a platform for customers, drivers, and restaurant managers in the food delivery ecosystem. Improved app performance with faster load times and smoother navigation. Worked on Backend for RestAPI and web portal.',
-      techStack: ['Kotlin', 'Microservices', 'Spring Boot']
+      description: 'Developed a food delivery application supporting customers, drivers, and restaurant managers. Worked on backend APIs and web portal.',
+      techStack: ['Kotlin', 'Microservices', 'Android', 'iOS', 'React Native', 'Spring Boot']
     },
     {
       name: 'OnDemand Services',
-      description: 'Led the development of an On-Demand Services Android application, offering services to customers. Integrated real-time communication between customers and service providers to improve service delivery. Worked on Backend for RestAPI and web portal.',
-      techStack: ['Java', 'Kotlin', 'Firebase', 'WebSockets', 'Angular', 'Spring Boot']
+      description: 'Built an on-demand services application with real-time communication between users and service providers. Worked on backend APIs and web portal.',
+      techStack: ['Java', 'Kotlin', 'Firebase', 'WebSockets', 'Angular', 'Android', 'iOS', 'React Native', 'Spring Boot']
     }
   ]
 

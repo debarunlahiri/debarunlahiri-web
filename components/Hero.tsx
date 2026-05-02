@@ -57,14 +57,7 @@ const Hero = () => {
           <span>github.com/debarunlahiri</span>
         </a>
         
-        <a
-          href="tel:+919205225428"
-          onClick={() => trackLinkClick({ href: 'tel:+919205225428', label: 'Phone Hero' })}
-          className="flex items-center justify-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-        >
-          <Phone size={16} className="flex-shrink-0" />
-          <span>+91-9205225428</span>
-        </a>
+       
       </div>
 
       {/* Download Resume Buttons */}
