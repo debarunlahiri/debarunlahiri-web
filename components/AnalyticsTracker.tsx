@@ -15,7 +15,7 @@ const AnalyticsTracker = () => {
           signal: controller.signal,
         })
       } catch (error) {
-        if ((error as Error).name !== 'AbortError') {
+        if (process.env.NODE_ENV === 'production' && (error as Error).name !== 'AbortError') {
           console.warn('Analytics tracker failed:', error)
         }
       }

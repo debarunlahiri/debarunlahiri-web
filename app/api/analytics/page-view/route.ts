@@ -3,7 +3,7 @@ import { supabaseAdmin } from '@/lib/supabase-admin'
 
 export async function POST(request: Request) {
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
-    return NextResponse.json({ message: 'Supabase not configured' }, { status: 500 })
+    return new NextResponse(null, { status: 204 })
   }
 
   let payload: { path?: string } = {}
@@ -45,13 +45,14 @@ export async function POST(request: Request) {
     })
 
     if (error) {
-      console.error('Supabase insert error:', error)
-      return NextResponse.json({ message: 'Failed to record page view' }, { status: 500 })
+      console.warn('Supabase page view insert skipped:', error.message)
+      return new NextResponse(null, { status: 204 })
     }
 
     return NextResponse.json({ message: 'Page view recorded' })
   } catch (error) {
-    console.error('Page view route error:', error)
-    return NextResponse.json({ message: 'Unexpected error' }, { status: 500 })
+    const message = error instanceof Error ? error.message : 'Unknown error'
+    console.warn('Page view analytics skipped:', message)
+    return new NextResponse(null, { status: 204 })
   }
 }
