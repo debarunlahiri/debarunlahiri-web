@@ -87,7 +87,7 @@ const ClientProjects = () => {
   return (
     <section className="mb-6 sm:mb-8">
       <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-gray-900 dark:border-gray-100 pb-2">
-        Client Projects
+        Portfolio Projects
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
